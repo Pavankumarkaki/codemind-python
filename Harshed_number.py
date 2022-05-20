@@ -1,11 +1,12 @@
-def har(m):
-    n=m
+def sd(n):
     s=0
     while n>0:
-        s+=n%10
+        r=n%10
+        s+=r
         n//=10
-    if m%s==0:
-        return True
-    return False
-m=int(input())
-print(har(m))
+    return s
+n=int(input())
+if n%sd(n)==0:
+    print(True)
+else:
+    print(False)
