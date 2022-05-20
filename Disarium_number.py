@@ -1,19 +1,14 @@
-def dis(n):
-    if n<10:
-        return True
-    else:
-        temp=n
-        i=len(str(n))
-        s=0
-        while n>0:
-            r=n%10
-            s+=r**i
-            i-=1
-            n//=10
-        if s==temp:
-            return True
-        else:
-            return False
-            
+def ds(n):
+    s=0
+    i=len(str(n))
+    while n>0:
+        r=n%10
+        s+=r**i
+        i-=1
+        n//=10
+    return s
 n=int(input())
-print(dis(n))
+if ds(n)==n:
+    print(True)
+else:
+    print(False)
