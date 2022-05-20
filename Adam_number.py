@@ -1,12 +1,12 @@
 def revs(n):
-    rev=0
+    r=0
     while n>0:
-        rev=rev*10+n%10
+        r=r*10+n%10
         n//=10
-    return rev
+    return r
 n=int(input())
-nn=revs(n)
-if n**2==revs(nn**2):
+rn=revs(n)
+if n**2==revs(rn**2):
     print(True)
 else:
     print(False)
