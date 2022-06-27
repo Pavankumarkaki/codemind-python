@@ -1,11 +1,12 @@
+def neon(n):
+    s=0
+    while n>0:
+        s+=n%10
+        n//=10
+    return s
 n=int(input())
-d=n*n
-sum=0
-while d>0:
-    r=d%10
-    sum+=r
-    d=d//10
-if sum==n:
-    print('Neon Number')
+s=n*n
+if n==neon(s):
+    print("Neon Number")
 else:
-    print('Not Neon Number')
+    print("Not Neon Number")
