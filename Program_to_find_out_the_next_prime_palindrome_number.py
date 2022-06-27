@@ -1,24 +1,19 @@
 def isprime(n):
     if n==1:
-        return False
+        return 0
     else:
         for i in range(2,int(n**0.5)+1):
             if n%i==0:
-                return False
-        return True
+                return 0
+        else:
+            return 1
 def pal(n):
-    tem=n
-    rev=0
-    while n>0:
-        r=n%10
-        rev=rev*10+r
-        n=n//10
-    if tem==rev:
-        return True
+    if str(n)==str(n)[::-1]:
+       return 1
     else:
-        return False
+        return 0
 n=int(input())
 n+=1
-while pal(n)==False or isprime(n)==False:
+while(pal(n)==0 or isprime(n)==0):
     n+=1
 print(n)
