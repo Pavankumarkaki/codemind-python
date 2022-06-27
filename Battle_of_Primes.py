@@ -6,9 +6,10 @@ def isprime(n):
             if n%i==0:
                 return False
         return True
-n=int(input())
-m=int(input())
-i=1
-while not isprime(i+n+m):
-    i+=1
-print(i)
+n1=int(input())
+n2=int(input())
+s=n1+n2
+k=s+1
+while not isprime(k):
+    k+=1
+print(k-s)
