@@ -1,14 +1,8 @@
-def digit(n):
-    c=0
-    while n>0:
-        c+=1
-        n//=10
-    return c
 n=int(input())
-m=list(map(int,input().split()))
-f=digit(min(m))
+a=list(map(int,input().split()))
+m=min(a)
 c=0
-for i in m:
-    if digit(i)==f:
+for i in a:
+    if len(str(m))==len(str(i)):
         c+=1
 print(c)
