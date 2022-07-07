@@ -1,15 +1,19 @@
-def hap(n):
-    if n<10:
-        return n
-    
-    s=0
-    while n>0:
-        s+=(n%10)**2
-        n//=10
-    return hap(s)
+def happy(n):
+    if n<=10:
+        if n==1 or n==7 or n==10:
+            return True
+        else:
+            return False
+    else:
+        while n>9:
+            s=0
+            for i in str(n):
+                s+=int(i)**2
+            n=s
+        if n==1 or n==7:
+            return True
+        else:
+            return False
         
 n=int(input())
-if hap(n)==1 or hap(n)==7:
-    print(True)
-else:
-    print(False)
+print(happy(n))
