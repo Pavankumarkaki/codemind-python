@@ -5,8 +5,8 @@ while(n>0):
      R=n%26
      if R==0:
           res+='Z'
-          n=0
+          n=n//26-1
      else:
           res+=a[R]
-     n//=26
+          n//=26
 print(res[::-1])
